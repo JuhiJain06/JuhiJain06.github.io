@@ -25,7 +25,7 @@ SELECT title FROM certifications WHERE title LIKE '%AI%';
 - **Shell commands:** `help`, `whoami`, `about`, `projects`, `experience`, `skills`, `education`, `contact`, `tables`, `theme`, `api`, `clear`, plus ↑/↓ for command history
 - Easter eggs: try `DROP TABLE projects` or `sudo hire juhi` 😉
 
-The SQL engine is about 40 lines of vanilla JavaScript. A regular expression parses the query into its clauses, and the engine then filters, sorts, limits and projects plain JavaScript arrays of objects.
+The SQL engine is about 30 lines of vanilla JavaScript. A regular expression parses the query into its clauses, and the engine then filters, sorts, limits and projects plain JavaScript arrays of objects.
 
 ### 2. View the site as an API response
 The **`{ }`** button in the nav bar renders the whole portfolio as a `GET /api/v1/juhi-jain → 200 OK` JSON response, syntax-highlighted.
