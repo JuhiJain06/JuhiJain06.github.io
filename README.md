@@ -22,7 +22,7 @@ SELECT title FROM certifications WHERE title LIKE '%AI%';
 - **Tables:** `projects`, `experience`, `skills`, `education`, `certifications` (type `tables` to see their columns)
 - **Supported SQL:** `SELECT` with column lists or `*`, `COUNT(*)`, `WHERE` (`=`, `!=`, `<>`, `>`, `<`, `>=`, `<=`, `LIKE`, `AND`), `ORDER BY … ASC|DESC`, `TOP n` / `LIMIT n`
 - Errors are styled like SQL Server's, for example `Invalid column name 'salary'`
-- **Shell commands:** `help`, `whoami`, `about`, `projects`, `experience`, `skills`, `education`, `contact`, `tables`, `theme`, `api`, `clear`, plus ↑/↓ for command history
+- **Shell commands:** `help`, `whoami`, `about`, `projects`, `experience`, `skills`, `education`, `contact`, `resume`, `tables`, `theme`, `api`, `clear`, plus ↑/↓ for command history
 - Easter eggs: try `DROP TABLE projects` or `sudo hire juhi` 😉
 
 The SQL engine is about 30 lines of vanilla JavaScript. A regular expression parses the query into its clauses, and the engine then filters, sorts, limits and projects plain JavaScript arrays of objects.
@@ -54,7 +54,9 @@ The **`{ }`** button in the nav bar renders the whole portfolio as a `GET /api/v
 
 ```
 .
-├── index.html    # the entire site: markup, styles and scripts
+├── index.html            # the entire site: markup, styles and scripts
+├── Juhi_Jain_Resume.pdf  # downloadable résumé (hero, contact and the `resume` command)
+├── favicon.svg           # browser-tab icon
 ├── README.md
 └── .gitignore
 ```

@@ -255,6 +255,7 @@
     <p class="lede">I'm a software engineer from Jaipur. I build responsive interfaces with HTML, CSS and JavaScript, and the APIs and databases behind them with C#, ASP.NET Core and SQL Server. I also have a background in AI and machine learning.</p>
     <div class="cta">
       <a class="btn primary" href="#work">See my work →</a>
+      <a class="btn" href="Juhi_Jain_Resume.pdf" download>Download résumé ↓</a>
       <a class="btn" href="mailto:juhijain0604@gmail.com">Get in touch</a>
     </div>
     <span class="hint">↳ psst — the terminal is real. Query my résumé in SQL.</span>
@@ -403,6 +404,7 @@
     <a class="btn primary" href="mailto:juhijain0604@gmail.com">juhijain0604@gmail.com</a>
     <a class="btn" href="https://linkedin.com/in/juhi-jain-a9ab67248" target="_blank" rel="noopener">LinkedIn ↗</a>
     <a class="btn" href="https://github.com/JuhiJain06" target="_blank" rel="noopener">GitHub ↗</a>
+    <a class="btn" href="Juhi_Jain_Resume.pdf" download>Résumé (PDF) ↓</a>
   </div>
 </section>
 </main>
@@ -501,7 +503,7 @@
   const COMMANDS = {
     help() {
       print('commands:', 'y');
-      print('  whoami · about · projects · experience · skills · education · contact\n  tables · theme · api · clear');
+      print('  whoami · about · projects · experience · skills · education · contact\n  resume · tables · theme · api · clear');
       print('or write SQL against my résumé:', 'y');
       print("  SELECT * FROM experience;\n  SELECT name, year FROM projects ORDER BY year DESC;\n  SELECT COUNT(*) FROM skills WHERE category = 'AI/ML';\n  SELECT title FROM certifications WHERE title LIKE '%AI%';");
     },
@@ -512,6 +514,7 @@
     skills() { table(runSQL('SELECT name, category FROM skills ORDER BY category')); },
     education() { table(runSQL('SELECT school, degree, years FROM education')); },
     contact() { print('email     juhijain0604@gmail.com\nlinkedin  linkedin.com/in/juhi-jain-a9ab67248\ngithub    github.com/JuhiJain06'); },
+    resume() { print('downloading Juhi_Jain_Resume.pdf…', 'd'); const a = document.createElement('a'); a.href = 'Juhi_Jain_Resume.pdf'; a.download = ''; document.body.appendChild(a); a.click(); a.remove(); },
     tables() { Object.entries(DB).forEach(([t, r]) => print(`${t.padEnd(15)}(${Object.keys(r[0]).join(', ')})`)); },
     theme() { toggleTheme(); print('theme toggled ◐', 'd'); },
     api() { toggleApi(true); },
@@ -560,7 +563,7 @@
     projects: DB.projects.map(({ id, ...r }) => ({ ...r, stack: r.stack.split(', ') })),
     skills: DB.skills.reduce((a, s) => ((a[s.category] = a[s.category] || []).push(s.name), a), {}),
     certifications: DB.certifications.map(c => c.title),
-    links: { email: 'mailto:juhijain0604@gmail.com', linkedin: 'https://linkedin.com/in/juhi-jain-a9ab67248', github: 'https://github.com/JuhiJain06' },
+    links: { email: 'mailto:juhijain0604@gmail.com', linkedin: 'https://linkedin.com/in/juhi-jain-a9ab67248', github: 'https://github.com/JuhiJain06', resume: 'https://juhijain06.github.io/Juhi_Jain_Resume.pdf' },
   };
   const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
   document.getElementById('json').innerHTML = esc(JSON.stringify(apiPayload, null, 2))
