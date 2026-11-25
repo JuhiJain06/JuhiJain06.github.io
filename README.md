@@ -10,8 +10,8 @@ The site is a single hand-written HTML file. It has no frameworks, libraries or 
 
 ## ✨ What makes it different
 
-### 1. Query my résumé in SQL
-The terminal at the top of the site is real. My résumé is stored as tables, and visitors can run SQL against it right in the browser:
+### 1. Query my resume in SQL
+The terminal at the top of the site is real. My resume is stored as tables, and visitors can run SQL against it right in the browser:
 
 ```sql
 SELECT name, year FROM projects ORDER BY year DESC;
@@ -55,7 +55,7 @@ The **`{ }`** button in the nav bar renders the whole portfolio as a `GET /api/v
 ```
 .
 ├── index.html            # the entire site: markup, styles and scripts
-├── Juhi_Jain_Resume.pdf  # downloadable résumé (hero, contact and the `resume` command)
+├── Juhi_Jain_Resume.pdf  # downloadable resume (hero, contact and the `resume` command)
 ├── favicon.svg           # browser-tab icon
 ├── README.md
 └── .gitignore
