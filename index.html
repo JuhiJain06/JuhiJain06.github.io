@@ -255,10 +255,10 @@
     <p class="lede">I'm a software engineer from Jaipur. I build responsive interfaces with HTML, CSS and JavaScript, and the APIs and databases behind them with C#, ASP.NET Core and SQL Server. I also have a background in AI and machine learning.</p>
     <div class="cta">
       <a class="btn primary" href="#work">See my work →</a>
-      <a class="btn" href="Juhi_Jain_Resume.pdf" download>Download résumé ↓</a>
+      <a class="btn" href="Juhi_Jain_Resume.pdf" download>Download resume ↓</a>
       <a class="btn" href="mailto:juhijain0604@gmail.com">Get in touch</a>
     </div>
-    <span class="hint">↳ psst — the terminal is real. Query my résumé in SQL.</span>
+    <span class="hint">↳ psst — the terminal is real. Query my resume in SQL.</span>
   </div>
   <div>
     <div class="terminal" aria-label="Interactive terminal">
@@ -325,7 +325,7 @@
       <h3>This portfolio<small>Interactive site with an in-browser SQL engine</small></h3>
       <ul>
         <li>Responsive layout built from scratch in HTML and CSS (Grid, Flexbox, custom properties), with light and dark themes.</li>
-        <li>A small SQL engine in vanilla JavaScript: visitors query my résumé with SELECT, WHERE, LIKE, ORDER BY and COUNT.</li>
+        <li>A small SQL engine in vanilla JavaScript: visitors query my resume with SELECT, WHERE, LIKE, ORDER BY and COUNT.</li>
         <li>An "API view" that renders the whole site as a syntax-highlighted JSON response.</li>
       </ul>
       <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Responsive</span></div>
@@ -404,7 +404,7 @@
     <a class="btn primary" href="mailto:juhijain0604@gmail.com">juhijain0604@gmail.com</a>
     <a class="btn" href="https://linkedin.com/in/juhi-jain-a9ab67248" target="_blank" rel="noopener">LinkedIn ↗</a>
     <a class="btn" href="https://github.com/JuhiJain06" target="_blank" rel="noopener">GitHub ↗</a>
-    <a class="btn" href="Juhi_Jain_Resume.pdf" download>Résumé (PDF) ↓</a>
+    <a class="btn" href="Juhi_Jain_Resume.pdf" download>Resume (PDF) ↓</a>
   </div>
 </section>
 </main>
@@ -425,7 +425,7 @@
     try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
   }
 
-  // ---------- résumé as a database ----------
+  // ---------- resume as a database ----------
   const DB = {
     projects: [
       { id: 1, name: 'MovieAPI', year: 2026, type: 'Backend', stack: 'C#, ASP.NET Core, Dapper, SQL Server, JWT, Supabase' },
@@ -504,7 +504,7 @@
     help() {
       print('commands:', 'y');
       print('  whoami · about · projects · experience · skills · education · contact\n  resume · tables · theme · api · clear');
-      print('or write SQL against my résumé:', 'y');
+      print('or write SQL against my resume:', 'y');
       print("  SELECT * FROM experience;\n  SELECT name, year FROM projects ORDER BY year DESC;\n  SELECT COUNT(*) FROM skills WHERE category = 'AI/ML';\n  SELECT title FROM certifications WHERE title LIKE '%AI%';");
     },
     whoami() { print('juhi_jain: B.Tech CSE (AI, ML & Robotics) · full-stack engineer · Jaipur'); },
